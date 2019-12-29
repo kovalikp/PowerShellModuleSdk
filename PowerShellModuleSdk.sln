@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_root", "_root", "{0BED9E4A-0F0F-477E-9E85-CE41203F6445}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		global.json = global.json
+		nuget.config = nuget.config
+		strongname.snk = strongname.snk
+		version.json = version.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kovalikp.NET.Sdk.PowerShellModule", "src\Kovalikp.NET.Sdk.PowerShellModule\Kovalikp.NET.Sdk.PowerShellModule.csproj", "{5BB527FB-AEFC-4B1B-93A6-89F62D540F24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BB527FB-AEFC-4B1B-93A6-89F62D540F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB527FB-AEFC-4B1B-93A6-89F62D540F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB527FB-AEFC-4B1B-93A6-89F62D540F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB527FB-AEFC-4B1B-93A6-89F62D540F24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34DDE53F-F4ED-48C9-8020-96D31F662AD7}
+	EndGlobalSection
+EndGlobal

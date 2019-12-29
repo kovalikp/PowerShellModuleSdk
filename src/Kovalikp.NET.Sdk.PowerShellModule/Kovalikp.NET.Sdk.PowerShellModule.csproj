@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetName>Kovalikp.NET.Sdk.PowerShellModule.Tasks</TargetName>
+
+    <IsPackable>true</IsPackable>
+    <NuspecFile>$(MSBuildProjectName).nuspec</NuspecFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+</Project>
