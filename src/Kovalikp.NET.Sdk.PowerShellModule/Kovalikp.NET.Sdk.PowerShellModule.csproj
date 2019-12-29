@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,8 +6,18 @@
 
     <IsPackable>true</IsPackable>
     <NuspecFile>$(MSBuildProjectName).nuspec</NuspecFile>
+
+    <!-- Allow assemblies outside of lib in the package -->
+    <NoWarn>$(NoWarn);NU5100</NoWarn>
   </PropertyGroup>
 
-  <ItemGroup>
-  </ItemGroup>
+  <Target Name="PopulateNuspec" BeforeTargets="InitializeStandardNuspecProperties">
+    <PropertyGroup>
+      <PackageTags>$(PackageTags.Replace(';',' '))</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <NuspecProperty Include="outputPath=$(OutputPath)" />
+    </ItemGroup>
+  </Target>
 </Project>

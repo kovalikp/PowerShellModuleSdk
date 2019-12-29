@@ -16,7 +16,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_root", "_root", "{0BED9E4A
 		version.json = version.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kovalikp.NET.Sdk.PowerShellModule", "src\Kovalikp.NET.Sdk.PowerShellModule\Kovalikp.NET.Sdk.PowerShellModule.csproj", "{5BB527FB-AEFC-4B1B-93A6-89F62D540F24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kovalikp.NET.Sdk.PowerShellModule", "src\Kovalikp.NET.Sdk.PowerShellModule\Kovalikp.NET.Sdk.PowerShellModule.csproj", "{5BB527FB-AEFC-4B1B-93A6-89F62D540F24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{E56C5F62-7B1B-4300-BD65-69D273656265}"
+	ProjectSection(SolutionItems) = preProject
+		tools\Workarounds.props = tools\Workarounds.props
+		tools\Workarounds.targets = tools\Workarounds.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

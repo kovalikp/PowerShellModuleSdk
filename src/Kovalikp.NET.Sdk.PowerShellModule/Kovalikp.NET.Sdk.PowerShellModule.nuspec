@@ -11,7 +11,8 @@
     $CommonFileElements$
     <file src="Sdk\*" target="Sdk" />
     <file src="build\**" target="build" />
+    <file src="_._" target="lib\netstandard2.0\_._" />
 
-    <file src="$outputPath$\**" target="\" />
+    <file src="$outputPath$**" target="tasks" />
   </files>
 </package>

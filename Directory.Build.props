@@ -1,12 +1,12 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="Sdk.props" Sdk="Microsoft.DotNet.Arcade.Sdk" />
+  <!--<Import Project="Sdk.props" Sdk="Microsoft.DotNet.Arcade.Sdk" />-->
 
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <!--<RepoRootPath>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</RepoRootPath>
-    <BaseIntermediateOutputPath>$(RepoRootPath)obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
-    <BaseOutputPath Condition=" '$(BaseOutputPath)' == '' ">$(RepoRootPath)bin\$(MSBuildProjectName)\</BaseOutputPath>
-    <PackageOutputPath>$(RepoRootPath)bin\Packages\$(Configuration)\</PackageOutputPath>-->
+    <RepoRootPath>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</RepoRootPath>
+    <BaseIntermediateOutputPath>$(RepoRootPath)artifacts\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <BaseOutputPath Condition=" '$(BaseOutputPath)' == '' ">$(RepoRootPath)artifacts\bin\$(MSBuildProjectName)\</BaseOutputPath>
+    <PackageOutputPath>$(RepoRootPath)artifacts\packages\$(Configuration)\</PackageOutputPath>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -20,6 +20,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/kovalikp/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/kovalikp/PowerShellModuleSdk</RepositoryUrl>
+    <Serviceable>false</Serviceable>
+    <DevelopmentDependency>true</DevelopmentDependency>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
@@ -31,10 +33,12 @@
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="Nerdbank.GitVersioning" Version="3.0.28" PrivateAssets="all" />
-    <!--<PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.113" PrivateAssets="all" />-->
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.113" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
-    <!--<AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="stylecop.json" />-->
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="stylecop.json" />
   </ItemGroup>
+
+  <Import Project="tools\Workarounds.props" />
 </Project>
